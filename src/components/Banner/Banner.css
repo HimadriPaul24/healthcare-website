@@ -1,0 +1,41 @@
+.main-heading {
+    
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 65px;
+}
+.banner-half-bg {
+    background: #3DC5DF;
+}
+
+.padding-resize {
+    padding: 0;
+    
+}
+
+.show-off {
+    background: transparent;
+   border: 2px solid #fff;
+   color: #fff;
+   padding: 7px 23px;
+   margin-top: 5px;
+   transition: .3s;
+}
+.show-off:hover{
+    background: #fff;
+    color: #3DC5DF;
+    
+}
+
+
+
+@media only screen and (max-width:688px) {
+
+    .banner-half-bg{
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    
+   
+        
+}
