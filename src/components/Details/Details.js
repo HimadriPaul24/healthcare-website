@@ -17,20 +17,17 @@ const Details = () => {
 
   return (
     <div>
-      <h2>id {foundDetail?.name}</h2>
+      {/* <h2>id {foundDetail?.id}</h2> */}
       <div className="m-2">
         <div class="card single-card">
-          <img
-            className="img-service w-50 card-img-top"
-            src={foundDetail?.img}
-            alt="..."
-          />
+          <img className="img-service w-50" src={foundDetail?.img} className="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">{foundDetail?.name}</h5>
-            <p class="card-text">{foundDetail?.discription}</p>
+            <p class="card-text">{foundDetail?.description}</p>
             <br />
-            
+
           </div>
+
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import {
 }
   from "react-router-dom";
 import Home from './components/Home/Home';
+import Testimonial from './components/Testimonial/Testimonial';
 import About from './components/About/About';
 
 
@@ -14,11 +15,12 @@ import Services from './components/Services/Services';
 import Footer from "./components/Footer/Footer";
 import Login from './components/Login/Login';
 import Signup from './components/SignUp/SignUp';
-import PrivateRoute from "components/PrivateRoute/PrivateRoute";
+// import PrivateRoute from "components/PrivateRoute/PrivateRoute";
 import Details from "./components/Details/Details";
 
 import NotFound from './components/NotFound/NotFound';
 import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -41,18 +43,23 @@ function App() {
 
               </Home>
             </Route>
+            <PrivateRoute path="/care">
+              <Testimonial>
 
-            <Route path="/about">
+              </Testimonial>
+            </PrivateRoute>
+
+            <PrivateRoute path="/about">
               <About>
 
               </About>
 
-            </Route>
+            </PrivateRoute>
 
             <Route path="/services/:id">
               <Details></Details>
             </Route>
-            
+
             <Route path="/services">
               <Services></Services>
             </Route>
@@ -69,8 +76,8 @@ function App() {
           </Switch>
           <Footer></Footer>
 
-          <PrivateRoute></PrivateRoute>
-          
+          {/* <PrivateRoute></PrivateRoute> */}
+
         </Router>
       </AuthProvider>
     </div>
